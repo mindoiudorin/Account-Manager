@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @*Somehow fix the resize of the navbar upon refresh*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("css", required: false)
+</head>
+<body>
+    @using AccountManager.App_Start
+    <nav class="navbar-primary" )>
+        <ul class="navbar-primary-menu">
+            <li>
+                @*@Html.ActionLink("Home", "Index", "Home")*@
+                <a href="@Url.Action("Index", "Home")">
+                    <span class="glyphicon">LDC</span>
+                    <span class="nav-label">Home</span>
+                </a>
+            </li>
+            @if (Request.IsAuthenticated)
+            {
+                <!--<li>
+                    <a href="/AccountManager/Home/About">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="nav-label">About</span>
+                    </a>
+                </li>-->
+            }
+
+            <!--li>
+                <a href="/AccountManager/Home/Contact">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <span class="nav-label">Contact</span>
+                </a>
+            </li>-->
+        </ul>
+        @Html.Partial("_LoginPartial")
+        <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+    </nav>
+    <div class="container body-content">
+        <div class="content">
+            @RenderBody()
+            <hr />
+            <div class="push-footer"></div>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - AccountManager</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="smallScreenModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Display too small</h5>
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var rootUrl = '@Url.RootUrl()';
+        var controllerUrl =  '@Url.CurrentController()';
+        var actionUrl = '@Url.CurrentAction()';
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AccountManager.Models.EditUserViewModel>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<div class="container-fluid">
+    <h2>Users</h2>
+
+    @*<p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    *@
+    <table class="table table-hover">
+        <thead class="table-black-head">
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th scope="col">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody class="table-black-body">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.UserName }) |
+                        @Html.ActionLink("Roles", "UserRoles", new { id = item.UserName }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.UserName })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="navbar-primary-menu navbar-primary-bottom">
+            <li>
+                <a class="one-toggle collapsed" href="#" data-toggle="collapse" data-target="#profile" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="nav-label" style="display: inline;">@User.Identity.GetUserName()</span>
+                    <!--<span class="glyphicon glyphicon-arrow-left pull-right"></span>-->
+                </a>
+                <div id="profile" class="collapse out">
+                    <ul class="navbar-primary-menu" style="display: block;">
+                        <li>
+                            @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
+                            <a href="@Url.Action("ChangePassword", "Manage")">
+                                <span class="glyphicon glyphicon-lock"></span>
+                                <span class="nav-label" style="display: inline;">Change Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="logoffLink" href="javascript:document.getElementById('logoutForm').submit()">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                <span class="nav-label" style="display: inline;">Log off</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    <a id="registerLink" href="@Url.Action("Register", "Account")">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        <span class="nav-label" style="display: inline;">Register</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Users", "Manage")">
+                        <span class="glyphicon">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <span class="nav-label" style="display: inline;">Users</span>
+                    </a>
+                </li>
+
+            }
+        </ul>
+    }
+}
+else
+{
+    <ul class="navbar-primary-menu navbar-primary-bottom">
+        <li>
+            <a id="loginLink" href="@Url.Action("Login", "Account")">
+                <span class="glyphicon glyphicon-log-in"></span>
+                <span class="nav-label" style="display: inline;">Log in</span>
+            </a>
+        </li>
+    </ul>
+}

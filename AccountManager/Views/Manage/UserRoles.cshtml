@@ -1,0 +1,67 @@
+﻿@model AccountManager.Models.SelectUserRolesViewModel
+
+@{
+    ViewBag.Title = "User Roles";
+}
+
+<div class="container-fluid">
+    <h2>Roles for user @Html.DisplayFor(model => model.UserName)</h2>
+
+    @using (Html.BeginForm("UserRoles", "Manage", FormMethod.Post, new { encType = "multipart/form-data", name = "myform" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.HiddenFor(model => model.UserName)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    <table class="table table-hover">
+                        <thead class="table-black-head">
+                            <tr>
+                                <th class="col-md-1">
+                                    Select
+                                </th>
+                                <th class="col-md-1">
+                                    Role
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-black-body">
+                            <!--/Shared/EditorTemplate/SelectRoleEditorViewModel.cshtml-->
+                            @Html.EditorFor(model => model.Roles)
+
+                            @* alternate method for a future template
+                                @foreach (var item in Model.Roles)
+                                {
+                                    @Html.HiddenFor(modelItem => item.RoleName)
+                                    <tr>
+                                        <td style="text-align:center">
+                                            @Html.CheckBoxFor(modelItem => item.Selected)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RoleName)
+                                        </td>
+                                    </tr>
+                                }*@
+                        </tbody>
+                    </table>
+                </div>
+                <!--<br />
+                <hr />-->
+                <div class=" col-md-offset-10">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" /> | 
+                @*@Html.ActionLink("Back to List", "Users")*@
+                <a href="@Url.Action("Users", "Manage")" role="button" class="btn btn-default">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
