@@ -1,0 +1,15 @@
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\AccountManager.dal.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\AccountManager.dal.pdb
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\EntityFramework.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\EntityFramework.SqlServer.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\EntityFramework.xml
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\EntityFramework.SqlServer.xml
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\projects\__temp\AccountManager\s\AccountManager.dal\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\projects\__temp\AccountManager\s\AccountManager.dal\obj\Debug\AccountManager.dal.csproj.CoreCompileInputs.cache
+D:\projects\__temp\AccountManager\s\AccountManager.dal\obj\Debug\AccountManager.dal.dll
+D:\projects\__temp\AccountManager\s\AccountManager.dal\obj\Debug\AccountManager.dal.pdb

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManager", "AccountManager\AccountManager.csproj", "{F81C7379-7EE3-44A7-996A-3C37E340737E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManager.dal", "AccountManager.dal\AccountManager.dal.csproj", "{5CDFCE04-7237-4373-9A63-FCCCC7722E0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81C7379-7EE3-44A7-996A-3C37E340737E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81C7379-7EE3-44A7-996A-3C37E340737E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81C7379-7EE3-44A7-996A-3C37E340737E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81C7379-7EE3-44A7-996A-3C37E340737E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDFCE04-7237-4373-9A63-FCCCC7722E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDFCE04-7237-4373-9A63-FCCCC7722E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDFCE04-7237-4373-9A63-FCCCC7722E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDFCE04-7237-4373-9A63-FCCCC7722E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B47E209B-FD74-46F5-8A64-60515FFCE2EB}
+	EndGlobalSection
+	EndGlobalSection
+EndGlobal
